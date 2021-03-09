@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <title>To-do List</title>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="card-body">
+        <form action="/addToDo" method="POST">
+          <div class="row">
+            <div class="card-body">
+              <div class="form-group">
+                <!-- Title -->  
+                  <label for="title">Title</label>
+                  <input class="form-control" placeholder="Title" type="text" name="title" id="itle" maxlength="100" required autofocus>
+                </div>
+                <div class="form-group">
+                <!-- Description -->
+                  <label for="description">Description</label>
+                  <textarea class="form-control" placeholder="Description" name="description" id="description" maxlength="500" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                <!-- Status -->
+                  <label for="status">Status</label>
+                  <div class="input-group mb-3">
+                    <select class="form-control" name="status" id="status" required>
+                    <option disabled selected>Status</option>
+                    <option value="Inserito">Insert</option>
+                    <option value="In elaborazione">In Processing</option>
+                    <option value="Completato">Complete</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                <!-- Date -->
+                  <label for="description">Date</label>
+                  <input type="date" name="date" id="date" max="3000-12-31" min="1000-01-01" class="form-control" placeholder="yyyy-mm-dd">
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Create</button>
+                <a type="button" href="/" class="btn btn-light">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
