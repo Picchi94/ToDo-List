@@ -9,7 +9,7 @@ Command to launch the ToDo List:
 
 _node server.js_
 
-The terminal output shows the port which running the ToDo List
+The terminal output shows the port which is running the ToDo List
 
 Your app is listening on port "number"
 
